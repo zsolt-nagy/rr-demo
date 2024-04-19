@@ -22,7 +22,7 @@ const App = () => (
     <Router>
         <div>
             <Navbar />
-            <Routes>
+            <Routes basename={process.env.PUBLIC_URL ?? "/"}>
                 <Route path="/about" element={<About />} />
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<NotFound />} />
